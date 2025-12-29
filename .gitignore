@@ -1,0 +1,189 @@
+# =============================================================================
+# Terraform
+# =============================================================================
+
+# Local .terraform directories
+**/.terraform/*
+
+# Terraform lockfile - include in version control for consistent provider versions
+# Uncomment the line below if you want to exclude it (not recommended)
+# .terraform.lock.hcl
+
+# Terraform state files - NEVER commit these (contain sensitive data)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Terraform plan files (may contain sensitive data)
+*.tfplan
+*.plan
+out.plan
+plan.out
+
+# Override files - used for local overrides, not for version control
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform CLI configuration file
+.terraformrc
+terraform.rc
+
+# =============================================================================
+# Sensitive Variable Files - NEVER commit these
+# =============================================================================
+
+# .tfvars files may contain sensitive data (passwords, API keys, etc.)
+*.tfvars
+*.tfvars.json
+
+# Exception: You may want to track example/template variable files
+!*.tfvars.example
+!*.tfvars.template
+!terraform.tfvars.example
+
+# =============================================================================
+# Environment and Secrets
+# =============================================================================
+
+# Environment files
+.env
+.env.*
+*.env
+
+# AWS credentials (should NEVER be in repo)
+.aws/
+credentials
+credentials.json
+
+# SSH keys
+*.pem
+*.key
+*.pub
+id_rsa*
+id_ed25519*
+
+# SSL/TLS certificates
+*.crt
+*.csr
+*.p12
+*.pfx
+
+# =============================================================================
+# IDE and Editor Files
+# =============================================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*.swn
+*~
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# =============================================================================
+# OS Generated Files
+# =============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+.Trash-*
+
+# =============================================================================
+# Logs and Temporary Files
+# =============================================================================
+
+# Logs
+*.log
+logs/
+log/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+tmp/
+temp/
+
+# =============================================================================
+# Documentation Build Artifacts
+# =============================================================================
+
+# Generated docs
+docs/_build/
+site/
+public/
+
+# =============================================================================
+# CI/CD and Tools
+# =============================================================================
+
+# Terragrunt
+.terragrunt-cache/
+
+# Terraform Cloud/Enterprise
+.terraform.tfstate.lock.info
+
+# Infracost
+.infracost/
+
+# Checkov
+.checkov/
+
+# tfsec
+.tfsec/
+
+# Sentinel (HashiCorp policy)
+.sentinel/
+
+# =============================================================================
+# Project Specific (customize as needed)
+# =============================================================================
+
+# Local notes
+notes.txt
+TODO.md
+NOTES.md
+
+# Backup directories
+backup/
+backups/
