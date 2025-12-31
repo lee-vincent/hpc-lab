@@ -34,6 +34,15 @@ resource "aws_instance" "globus_connect_server" {
   associate_public_ip_address = true
   key_name                    = var.globus_key_name
 
+  user_data = <<-EOF
+    #!/bin/bash
+    cat > /home/ubuntu/install_globus.sh << 'SCRIPT'
+    ${file("${path.module}/install_globus.sh")}
+    SCRIPT
+    chown ubuntu:ubuntu /home/ubuntu/install_globus.sh
+    chmod +x /home/ubuntu/install_globus.sh
+  EOF
+
   root_block_device {
     volume_type           = "gp3"
     volume_size           = 100 # GB - suitable for HPC data staging
